@@ -14,8 +14,8 @@ from blog import *
 Bootstrap(app)
 Base = declarative_base()
 
-# engine = db.create_engine("ibmi://remotecmd:remote123@rgt", echo=True)
-engine = sa.create_engine("ibmi://remotecmd:remote123@rgt")
+echo=True)
+engine = sa.create_engine("ibmi://user:pwd@mysys")
 Session = sessionmaker(bind=engine)
 Base.metadata.create_all(engine)
 sa_session = Session()
